@@ -1,0 +1,56 @@
+# Issue form of the public repository thuong-nm/rocketly-releases (RELEASING.md → One-time setup).
+# The landing site links here: site/src/config.ts FEATURE_REQUEST_URL (Features page → "Request a feature").
+name: Feature request
+description: Suggest something that would make Rocketly better.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape Rocketly! Please [search the open requests](https://github.com/thuong-nm/rocketly-releases/issues?q=is%3Aissue+label%3Aenhancement+sort%3Areactions-%2B1-desc) first, and add a 👍 to an existing one instead of opening a duplicate.
+
+        Issues are public: do not include tokens, passwords, private URLs or personal data. You can write in English or Vietnamese (tiếng Việt).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: The task or problem behind the request. What gets in your way today?
+      placeholder: When I test an API that needs …, I have to …
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: What would you like Rocketly to do?
+      description: Describe the feature as you imagine it. Screenshots or examples from other tools are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How do you work around it now?
+      description: Optional. Another tool, a script, doing it by hand…
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Requests, bodies and parameters
+        - Authorization
+        - Variables and environments
+        - Scripts and tests
+        - Responses
+        - Collections
+        - Runner and CLI
+        - Import, export and code snippets
+        - WebSocket, SSE and GraphQL
+        - Accounts, sync and the secret vault
+        - Shared links
+        - Something else
+  - type: input
+    id: version
+    attributes:
+      label: Rocketly version and OS
+      description: Optional. The version is in Settings → About.
+      placeholder: 1.0.4 on Windows 11
